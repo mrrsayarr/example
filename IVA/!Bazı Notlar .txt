@@ -1,0 +1,89 @@
+Verilerin bir veri seti içinde Normal dağılmıyorsa bu tarz işlemlerin yapılmadığını bilmen gerekir. (İLK ADIM HER ZAMAN NORMAL'LİĞİ KONTROL ETMEKTİR)
+
+Sig. < 0.05 ise anlamlı bir farklılık elde edilir (Değer 0,05 ten küçükse)
+Sadece Normallik ararken p (Sig) değeri p > 0,05 aranır
+Diğer işlemlerde her zaman p < 0,05 olması istenir
+
+----
+
+NORMALLİK ANALİZİ
+	Analyze >> Descriptive Statics >> Explore
+	Hangi verilere göre Normal dağılacağını görmek için veriler seçilir
+	Plots butonundan "Normality plots with tests" seçeneği işaretlenir
+		
+	Örneklem sayısı az ise Kolmogrov-Smimov, çok ise Shapiro-wilk testi kullanılır
+
+	Skewness(Çarpıklık) ve Kurtosis(Basıklık) değerlerine bakılır 
+	(Her iki değerinde de -1,5 ve +1,5 arasında ise normal dağıldığı söylenebilir)
+	
+
+----------------------------------------------------------------------------------------------------
+
+Farklılaşma istendiği zaman T Testi --> İlk Sig (p) değerine bakılacak
+
+T Testi için
+	Analyze >> Compare Means >> Independent Sample T test seçilir
+	...
+
+----------------------------------------------------------------------------------------------------
+
+LSD için
+
+Ayrıca hata alırsan doğru değeri seçtiğine emin ol (SED yerine cinsiyet seçerken dikkatli ol)
+
+ANOVA Testi
+	Analyze >> Compare Means >> One-Way Anova Test
+	Ordan Hangi faktöre bağlı olup olmadığını öğrenmek için bir factor eklenir
+	Post Hoc butonundan LSD seçilir
+	Opitons Sekmesinden 1 ve 3 kutucuğun işaretlenmesi gerekir (Grafik için Mean Plots da seçilebilir)
+	
+	Test of Homogenility altındaki tabloda Sig. değeri altında değerler (p > 0,05: Varyanslar homojen dağılıyor denir)
+	Homojen değilse Robust Test sekmesine bakılır
+	(Normal dağılım şartı sağlanamasıydı Kruskal Wallis H testi kullanılacaktı)
+	
+	Ayrıca Anova da Sig. değeri 0,003 yani 0,05'ten küçük ise anlamlı farklılık olduğunu anlamına geliyor (Post Hoc Tests LSD değerine bakılır)
+	Eğer yanında yıldız olan değerler varsa onlar arasında bir anlam olduğu görülür, ayrıca Sig değeri de 0,05 ten küçük olacaktır
+	Eğer - varsa - olanın daha avantajlı olduğu söylenebilir (VİDEO DA VAR DK: 9.30)
+	
+	Raporlama için DK: 14.30'a bakarsın
+	
+	LSD Sütunu için değerlendirme yaparken yıldızlı olanları yazmayı unutma
+	
+	Anovada Anova tablosu kopyala ve sağına LSD sütunu eklersen yeterli olur
+
+----------------------------------------------------------------------------------------------------
+
+	
+
+----------------------------------------------------------------------------------------------------
+
+KORELASYON - REGRESYON
+
+** BİRİ DİĞERİ ÜZERİNDE ETKİLİ İSE --> "REGRESYON" Analizi kullanılır
+** İLİŞKİ VARSA --> "KORELASYON" Analizi kullanılır
+
+Korelasyon Analizini SPSS ile Hesaplama
+	Korelasyonda birbirlerini ilgilendiren olaylar arasında hesaplanır (ÖRNEK: Müşteri tatmini ve Müşteri memnuniyeti)
+	Korelasyon (R): Analyze >> Correlate >> Bivarite
+	Pearson seçilir (Çift yönü verir - Ayrıca Veriler Normal dağılıyorsa "Pearson", veri normal dağılmıyorsa "Spearman" yöntemi kullanılır (Bivariate Correlations))
+	(Çift yönlü seçilmek istenirse de Two-tailed kutucuğunun işaretlenmesi gerekir)
+	Tablo simetrik olduğu için tablo sadeleştirilir
+	Sig. değeri eğer 0,05 ten küçük olursa aralarında anlamlı ilişki var denebilir (İyi açıkladığı söylenebilir)
+	
+	Korelasyon katsayısı:
+		0,3'e kadar düşük seviye ilişki
+		0,5'e kadar orta düzey ilişki
+		0,5'den büyük olursa yüksek düzey ilişki denilebilir
+
+(Korelasyonda önce p değeri kontrol edilir, p > 0,05 ten büyükse anlamlı farklılık bulunmamaktadır) - Bağlantı yok anlamına gelebilir
+Korelasyon katasyısı 1 veya -1 e ne kadar yakın olursa o kadar bağ var denilebilir
+
+
+Basit Korelasyon
+	
+	Örneğin Sosyo eknomoik düzey arasında bir ilişki var mı Partial dan bakılır
+	İlişki olması için yıldızların olması gerekir
+	
+
+
+----------------------------------------------------------------------------------------------------
